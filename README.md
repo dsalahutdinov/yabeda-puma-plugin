@@ -19,6 +19,7 @@ Segmented by the worker (index of the worker):
  - `puma_running` - the number of running threads (spawned threads) for any puma worker
  - `puma_max_threads` - preconfigured maximum number of worker threads
  - `puma_backlog` - the number of backlog threads, the number of connections in that worker's "todo" set waiting for a worker thread.
+ - `puma_requests` - the number of total processed requests
 
 ## Installation
 
@@ -119,6 +120,8 @@ puma_pool_capacity{index="0"} 1
 puma_pool_capacity{index="1"} 5
 puma_max_threads{index="0"} 5
 puma_max_threads{index="1"} 5
+puma_requests_count{index="0"} 9
+puma_requests_count{index="1"} 10
 puma_workers 2
 puma_booted_workers 2
 puma_old_workers 0
